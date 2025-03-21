@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a31a279d-1b20-44e4-b88b-c81dea20140f" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Solo_Infinite_Leveling_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solo_Infinite_Leveling_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroAttackState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroIdleState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroNormalAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroNormalAttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroRunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroRunState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroWalkState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroWalkState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01_Scenes/999_TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Scenes/999_TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Resources/Animations/Warrior_Male.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Resources/Animations/Warrior_Male.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +124,7 @@
       <workItem from="1742431593871" duration="2466000" />
       <workItem from="1742538114464" duration="3000" />
       <workItem from="1742544902763" duration="13073000" />
-      <workItem from="1742558728138" duration="5781000" />
+      <workItem from="1742558728138" duration="7298000" />
     </task>
     <servers />
   </component>

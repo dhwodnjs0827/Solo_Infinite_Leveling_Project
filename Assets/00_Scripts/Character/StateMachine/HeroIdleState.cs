@@ -11,7 +11,6 @@ public class HeroIdleState : HeroGroundState
 
     public override void Enter()
     {
-        Debug.Log("Entered IdleState");
         stateMachine.Hero.Agent.speed = 0f;
         base.Enter();
         StartAnimation(stateMachine.Hero.HeroData.animationData.IdleParameterHash);
@@ -43,9 +42,12 @@ public class HeroIdleState : HeroGroundState
         {
             enemies = Physics.OverlapSphere(stateMachine.Hero.transform.position, 20f, enemyLayer);
 
-            stateMachine.TargetEnemy = enemies[0].gameObject;
-            stateMachine.Hero.Agent.SetDestination(stateMachine.TargetEnemy.transform.position);
-            stateMachine.ChangeState(stateMachine.RunState);
+            if (enemies.Length > 0)
+            {
+                stateMachine.TargetEnemy = enemies[0].gameObject;
+                stateMachine.Hero.Agent.SetDestination(stateMachine.TargetEnemy.transform.position);
+                stateMachine.ChangeState(stateMachine.RunState);
+            }
         }
     }
 }

@@ -8,7 +8,6 @@ public class HeroRunState : HeroGroundState
 
     public override void Enter()
     {
-        Debug.Log("Entered RunState");
         stateMachine.Hero.Agent.speed = 3f;
         base.Enter();
         StartAnimation(stateMachine.Hero.HeroData.animationData.RunParameterHash);

@@ -8,7 +8,6 @@ public class HeroWalkState : HeroGroundState
 
     public override void Enter()
     {
-        Debug.Log("Entered WalkState");
         stateMachine.Hero.Agent.speed = 1f;
         base.Enter();
         StartAnimation(stateMachine.Hero.HeroData.animationData.WalkParameterHash);
