@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a31a279d-1b20-44e4-b88b-c81dea20140f" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroIdleState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroIdleState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Solo_Infinite_Leveling_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solo_Infinite_Leveling_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroAttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroNormalAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroNormalAttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroWalkState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroWalkState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/01_Scenes/999_TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Scenes/999_TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Resources/Prefabs/Cloud.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Resources/Prefabs/Cloud.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Resources/Prefabs/StartSceneEnviroment.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Resources/Prefabs/StartSceneEnviroment.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/99_Externals/RPG Monster DUO PBR Polyart/Materials/PBRDefault.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/99_Externals/RPG Monster DUO PBR Polyart/Materials/PBRDefault.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Resources/Animations/Warrior_Male.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Resources/Animations/Warrior_Male.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroBaseState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroGroundState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroNormalAttackState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroRunState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroWalkState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -91,13 +88,15 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="34568">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="34568" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -129,6 +128,7 @@
       <workItem from="1742431593871" duration="2466000" />
       <workItem from="1742538114464" duration="3000" />
       <workItem from="1742544902763" duration="13073000" />
+      <workItem from="1742558728138" duration="5781000" />
     </task>
     <servers />
   </component>
@@ -144,24 +144,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/00_Scripts/Character/StateMachine/HeroWalkState.cs</url>
-          <line>15</line>
-          <properties documentPath="C:\Users\dhwod\Unity Project\Solo_Infinite_Leveling_Project\Assets\00_Scripts\Character\StateMachine\HeroWalkState.cs" containingFunctionPresentation="메서드 'Update'">
-            <startOffsets>
-              <option value="360" />
-            </startOffsets>
-            <endOffsets>
-              <option value="371" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

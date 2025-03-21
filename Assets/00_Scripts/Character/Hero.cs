@@ -17,6 +17,7 @@ public class Hero : MonoBehaviour
         heroData.animationData.Initialize();
         
         Agent =  GetComponent<NavMeshAgent>();
+        Agent.SetDestination(transform.position);
         Animator = GetComponentInChildren<Animator>();
 
         stateMachine = new HeroStateMachine(this);
@@ -30,5 +31,11 @@ public class Hero : MonoBehaviour
     private void Update()
     {
         stateMachine.Update();
+    }
+    
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 5f);
     }
 }

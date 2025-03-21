@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class HeroIdleState : HeroGroundState
 {
-    private readonly LayerMask enemyMask;
+    private readonly LayerMask enemyLayer;
 
     public HeroIdleState(HeroStateMachine stateMachine) : base(stateMachine)
     {
-        enemyMask = LayerMask.NameToLayer("Enemy");
+        enemyLayer = 1 << LayerMask.NameToLayer("Enemy");
     }
 
     public override void Enter()
     {
+        Debug.Log("Entered IdleState");
+        stateMachine.Hero.Agent.speed = 0f;
         base.Enter();
         StartAnimation(stateMachine.Hero.HeroData.animationData.IdleParameterHash);
     }
@@ -29,10 +31,21 @@ public class HeroIdleState : HeroGroundState
 
     private void FindEnemy()
     {
-        if(stateMachine.StageManager.enemies.Count <= 0) return;;
-        
-        stateMachine.TargetEnemy =  stateMachine.StageManager.enemies[0];
-        stateMachine.Hero.Agent.SetDestination(stateMachine.TargetEnemy.transform.position);
-        stateMachine.ChangeState(stateMachine.WalkState);
+        var enemies = Physics.OverlapSphere(stateMachine.Hero.transform.position, 5f, enemyLayer);
+
+        if (enemies.Length > 0)
+        {
+            stateMachine.TargetEnemy = enemies[0].gameObject;
+            stateMachine.Hero.Agent.SetDestination(stateMachine.TargetEnemy.transform.position);
+            stateMachine.ChangeState(stateMachine.WalkState);
+        }
+        else
+        {
+            enemies = Physics.OverlapSphere(stateMachine.Hero.transform.position, 20f, enemyLayer);
+
+            stateMachine.TargetEnemy = enemies[0].gameObject;
+            stateMachine.Hero.Agent.SetDestination(stateMachine.TargetEnemy.transform.position);
+            stateMachine.ChangeState(stateMachine.RunState);
+        }
     }
 }

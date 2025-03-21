@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class HeroNormalAttackState : HeroAttackState
 {
     public HeroNormalAttackState(HeroStateMachine stateMachine) : base(stateMachine)
@@ -6,17 +8,9 @@ public class HeroNormalAttackState : HeroAttackState
     
     public override void Enter()
     {
+        Debug.Log("Entered NormalAttackState");
         base.Enter();
         StartAnimation(stateMachine.Hero.HeroData.animationData.NormalAttackParameterHash);
-    }
-
-    public override void Update()
-    {
-        base.Update();
-        if (stateMachine.TargetEnemy)
-        {
-            stateMachine.ChangeState(stateMachine.IdleState);
-        }
     }
 
     public override void Exit()

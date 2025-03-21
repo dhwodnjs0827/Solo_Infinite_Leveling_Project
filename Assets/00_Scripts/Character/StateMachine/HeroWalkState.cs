@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class HeroWalkState : HeroGroundState
 {
     public HeroWalkState(HeroStateMachine stateMachine) : base(stateMachine)
@@ -6,6 +8,8 @@ public class HeroWalkState : HeroGroundState
 
     public override void Enter()
     {
+        Debug.Log("Entered WalkState");
+        stateMachine.Hero.Agent.speed = 1f;
         base.Enter();
         StartAnimation(stateMachine.Hero.HeroData.animationData.WalkParameterHash);
     }
@@ -24,7 +28,8 @@ public class HeroWalkState : HeroGroundState
 
     private void OnAttack()
     {
-        if (stateMachine.Hero.Agent.velocity.magnitude < 0.1f)
+        var range = Vector3.Distance(stateMachine.TargetEnemy.transform.position, stateMachine.Hero.transform.position);
+        if (range < 2f)
         {
             stateMachine.ChangeState(stateMachine.NormalAttackState);
         }

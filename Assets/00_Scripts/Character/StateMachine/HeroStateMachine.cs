@@ -8,6 +8,7 @@ public class HeroStateMachine : StateMachine
 
     public HeroIdleState IdleState { get; private set; }
     public HeroWalkState WalkState { get; private set; }
+    public HeroRunState RunState { get; private set; }
 
     public HeroNormalAttackState NormalAttackState { get; private set; }
     
@@ -21,6 +22,7 @@ public class HeroStateMachine : StateMachine
 
         IdleState = new HeroIdleState(this);
         WalkState = new HeroWalkState(this);
+        RunState = new HeroRunState(this);
 
         NormalAttackState = new HeroNormalAttackState(this);
     }
